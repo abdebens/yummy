@@ -1,0 +1,46 @@
+.heading {
+  text-transform: capitalize;
+  word-spacing: 0.4rem;
+  font-family: $special-font;
+
+  &--1 {
+    font-size: 3rem;
+    color: $main-color;
+  }
+
+  &--2 {
+    color: $secondary-color;
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+
+  &--2y {
+    color: $main-color;
+    font-size: 10rem;
+  }
+  &--3{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $text-color;
+    margin-bottom: 2rem;
+  }
+}
+
+.paragraph {
+  &__1 {
+    text-align: center;
+    margin: 5rem auto;
+    width: 40%;
+    color: $secondary-color;
+  }
+
+  &__2 {
+    font-size: 1.8rem;
+    color: $text-color;
+    width: 70%;
+    margin: 5rem 0;
+  }
+}

@@ -1,0 +1,378 @@
+.header {
+  background-color: $secondary-color;
+  background-image: url(../images/hero.webp);
+  background-repeat: no-repeat;
+  background-size: 40% 100%;
+  background-attachment: fixed;
+  background-position: left;
+  padding-bottom: 10rem;
+  @include respond(tab-port) {
+    background-image: none;
+  }
+  @include respond(tab-land) {
+    background-size: cover;
+    background-image: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0.342),
+        rgba(0, 0, 0, 0.733)
+      ),
+      url(../images/hero.webp);
+    background-attachment: fixed;
+    background-position: top;
+  }
+  @include respond(phone) {
+    background-color: $secondary-color;
+    background-image: none;
+  }
+
+  &__nav {
+    padding: 2rem;
+    @include center(space-between, row);
+    @include respond(tab-land) {
+      @include center(space-between, column);
+      padding: 0;
+    }
+    @include respond(tab-port) {
+      width: 100%;
+      flex: 1 1 auto;
+    }
+
+    &--logo {
+      img {
+        width: 15rem;
+      }
+    }
+
+    &__items {
+      display: flex;
+      gap: 10rem;
+      align-items: center;
+      padding: 5rem;
+      @include respond(tab-port) {
+        gap: 3rem;
+      }
+      @include respond(tab-land) {
+        background: $main-color;
+        width: 100%;
+        padding: 2rem;
+        color: $secondary-color;
+      }
+
+      & li {
+        color: $text-color;
+        list-style: none;
+        cursor: pointer;
+
+        @include respond(tab-land) {
+          flex: 1;
+        }
+      }
+    }
+
+    &__links:link,
+    &__links:visited {
+      color: $text-color;
+      text-decoration: none;
+      text-transform: capitalize;
+      font-weight: bold;
+      letter-spacing: 0.5rem;
+      transition: color 0.5s;
+      @include respond(tab-land) {
+        color: $secondary-color;
+
+        &:hover {
+          background-color: $secondary-color;
+        }
+      }
+
+      &:hover {
+        color: $main-color;
+      }
+    }
+  }
+}
+.hero {
+  @include center(center, column);
+  align-items: flex-start;
+  width: 50%;
+  gap: 3rem;
+  margin-left: auto;
+
+  @include respond(tab-land) {
+    align-items: flex-start;
+    margin-top: 8rem;
+    width: 90%;
+  }
+
+  @include respond(tab-port) {
+    align-items: center;
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 15rem;
+    @include respond(tab-port) {
+      font-size: 10rem;
+    }
+  }
+
+  &__text {
+    color: $text-color;
+    font-size: 1.8rem;
+    letter-spacing: 0.3rem;
+    @include respond(tab-port) {
+      margin-left: 5rem;
+    }
+  }
+  &__btn {
+    align-self: flex-start;
+    @include respond(tab-port) {
+      align-self: center;
+    }
+  }
+}
+
+.seller {
+  @include center(center, row);
+  @include respond(tab-port) {
+    @include center(center, column);
+  }
+  @include respond(tab-land) {
+    gap: 0;
+  }
+  gap: 10rem;
+
+  &__box {
+    @include center(center, column);
+    gap: 2rem;
+    &__img {
+      @include circle(30rem, 30rem);
+
+      @include respond(tab-land) {
+        @include circle(25rem, 25rem);
+      }
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+    }
+
+    &__text {
+      text-align: center;
+      width: 80%;
+    }
+
+    &__title {
+      font-size: 3rem;
+      color: $secondary-color;
+    }
+  }
+}
+.taste {
+  background: $secondary-color;
+
+  &__box {
+    @include center(center, row);
+    gap: 10rem;
+    padding: 1%;
+
+    @include respond(tab-port) {
+      @include center(center, column);
+      justify-content: center;
+      gap: 5rem;
+    }
+
+    &__img {
+      @include circle(45rem, 45rem);
+      @include respond(tab-land) {
+        @include circle(35rem, 35rem);
+      }
+
+      overflow: hidden;
+      img {
+        max-width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__text {
+      @include center(flex-end, column);
+      align-items: flex-start;
+      @include respond(tab-land) {
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    &__btn {
+      color: $secondary-color;
+      font-weight: bold;
+    }
+  }
+}
+
+.stat {
+  background-color: $secondary-color;
+
+  &__detail {
+    @include center(center, row);
+    gap: 5rem;
+    flex-wrap: wrap;
+
+    &__box {
+      border: 0.8rem solid $main-color;
+      padding: 5rem;
+      text-align: center;
+      flex-wrap: wrap;
+      @include circle(20rem, 20rem);
+      @include center(center, row);
+      @include respond(tab-port) {
+        @include circle(35rem, 35rem);
+      }
+      &--name {
+        color: $text-color;
+        display: block;
+      }
+    }
+  }
+}
+
+.order {
+  background: $secondary-color;
+  &__box {
+    @include center(center, row);
+    gap: 10rem;
+    padding: 1%;
+    @include respond(tab-port) {
+      @include center(center, column-reverse);
+      justify-content: center;
+      gap: 5rem;
+    }
+
+    &__text {
+      @include center(center, column);
+      align-items: flex-start;
+      gap: 5rem;
+      @include respond(tab-port) {
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    &__btn {
+      color: $secondary-color;
+      font-weight: bold;
+    }
+    &__image {
+      @include circle(45rem, 45rem);
+      @include respond(tab-land) {
+        @include circle(35rem, 35rem);
+      }
+
+      overflow: hidden;
+      img {
+        max-width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.testimonial {
+  @include center(center, column);
+  align-items: center;
+  background-image: linear-gradient(
+      rgba($main-color, 0.8),
+      rgba($main-color, 0.4)
+    ),
+    url(../images/3.webp);
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+
+  & p {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+.subscribe {
+  @include center(center, column);
+  align-items: center;
+  height: 80vh;
+  background-color: #f3f3f3;
+  background-image: url(../images/icons_bg.png);
+  background-size: 42%;
+
+  &__form {
+    display: flex;
+
+    & input[type="button"]:hover {
+      background-color: $secondary-color;
+      color: $main-color;
+    }
+  }
+
+  &__input {
+    padding: 1rem;
+    border: 0.2rem solid $main-color;
+    outline: none;
+    font-size: 1.6rem;
+    width: 120%;
+  }
+}
+
+.footer {
+  background: $secondary-color;
+  @include center(center, row);
+  align-items: flex-start;
+  gap: 2rem;
+  padding-left: 2rem;
+  @include respond(tab-port) {
+    @include center(center, column);
+    gap: 5rem;
+    align-items: flex-start;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 2rem;
+
+    & i {
+      color: $secondary-color;
+      background: $text-color;
+      @include center(center, row);
+      @include circle(3rem, 3rem);
+      margin-top: 2rem;
+    }
+  }
+  &__box {
+    flex: 1 1 25%;
+
+    p {
+      font-size: 1.6rem;
+      margin: 0;
+    }
+
+    &__list {
+      list-style-type: none;
+    }
+
+    &__link:link,
+    &__link:visited {
+      color: $text-color;
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      &:hover {
+        color: $main-color;
+        border-bottom: 0.5rem solid $main-color;
+      }
+    }
+  }
+}

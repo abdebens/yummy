@@ -1,0 +1,25 @@
+.btn {
+  padding: 1rem;
+  background-color: $main-color;
+  outline: none;
+  border: 0;
+  font-family: $typing-font;
+  padding: 1.5rem 4rem;
+  border-radius: 0.5rem;
+  color: $text-color;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -ms-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: $main-color;
+    border: 0.1rem solid $main-color;
+  }
+}
