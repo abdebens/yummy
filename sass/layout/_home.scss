@@ -34,7 +34,6 @@
     }
     @include respond(tab-port) {
       width: 100%;
-      flex: 1 1 auto;
     }
 
     &--logo {
@@ -56,6 +55,9 @@
         width: 100%;
         padding: 2rem;
         color: $secondary-color;
+      }
+      @include respond(phone) {
+        flex-direction: column;
       }
 
       & li {
@@ -83,6 +85,10 @@
         &:hover {
           background-color: $secondary-color;
         }
+      }
+      @include respond(phone) {
+        display: block;
+        width: 100%;
       }
 
       &:hover {
